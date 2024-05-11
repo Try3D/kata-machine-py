@@ -11,7 +11,7 @@ An exercise-based python tool to practice common data structures and algorithms
 - [ ] Linked list
 - [ ] Circular Queue / Ring Buffer
 - [ ] Tree
-- [ ] Hash
+- [x] Hash
 - [ ] Graph ADT
 - [ ] Maze solving
 - [ ] LRU Cache

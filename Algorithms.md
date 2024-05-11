@@ -13,3 +13,6 @@
 - Stack
 - Queue
 - Deque
+
+## Priority Queue
+- Heap
