@@ -1,14 +1,30 @@
 import os
 import shutil
+import pytest
 import argparse
 
 
-def test_files():
-    print("Testing all files...")
+def fuzzy_test_search(search):
+    test_files = [
+        f[:-3]
+        for f in os.listdir("tests")
+        if f.startswith("test_") and f.endswith(".py")
+    ]
+
+    matches = [test_file for test_file in test_files if search in test_file]
+
+    return matches
 
 
-def test_single_file(filename):
-    print(f"Testing {filename}...")
+def test_single_file(search):
+    matches = fuzzy_test_search(search)
+
+    if not matches:
+        print("Cannot find any test files to run.")
+    else:
+        for match in matches:
+            test_module = f"tests/{match}"
+            pytest.main([f"{test_module}.py", "-s"])
 
 
 def generate_files():
@@ -26,6 +42,9 @@ def generate_files():
 
 def clean_files():
     print("Cleaning files...")
+    exercises_dir = "exercises"
+    if os.path.exists(exercises_dir):
+        shutil.rmtree(exercises_dir)
 
 
 def main():
@@ -40,10 +59,10 @@ def main():
     args = parser.parse_args()
 
     if args.action == "test":
-        if args.filename:
-            test_single_file(args.filename)
-        else:
-            test_files()
+        if not args.filename:
+            print("Error: Filename must be provided for the 'test' action.")
+            return
+        test_single_file(args.filename)
     elif args.action == "generate":
         generate_files()
     elif args.action == "clean":

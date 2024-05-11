@@ -1,6 +1,12 @@
-from typing import TypeVar, Generic
+from typing import TypeVar, Generic, Union
 
 T = TypeVar("T")
+
+
+class Node(Generic[T]):
+    def __init__(self, data: T):
+        self.data: T = data
+        self.next: Union[Node[T], None] = None
 
 
 class Stack(Generic[T]):
@@ -10,10 +16,10 @@ class Stack(Generic[T]):
     def push(self, value: T) -> None:
         ...
 
-    def pop(self) -> T:
+    def pop(self) -> Union[T, None]:
         ...
 
-    def peek(self) -> T:
+    def peek(self) -> Union[T, None]:
         ...
 
     def is_empty(self) -> bool:
