@@ -16,4 +16,4 @@ classifiers = [
 "Bug Tracker" = "https://github.com/try3d/dashdot/issues"
 
 [tool.ruff]
-line-length = 80
+line-length = 100

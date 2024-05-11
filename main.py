@@ -6,9 +6,7 @@ import argparse
 
 def fuzzy_test_search(search):
     test_files = [
-        f[:-3]
-        for f in os.listdir("tests")
-        if f.startswith("test_") and f.endswith(".py")
+        f[:-3] for f in os.listdir("tests") if f.startswith("test_") and f.endswith(".py")
     ]
 
     matches = [test_file for test_file in test_files if search in test_file]
@@ -51,18 +49,22 @@ def main():
     parser = argparse.ArgumentParser(
         description="Utility for testing, generating, and cleaning files"
     )
-    parser.add_argument(
-        "action", choices=["test", "generate", "clean"], help="Action to perform"
-    )
+    parser.add_argument("action", choices=["test", "generate", "clean"], help="Action to perform")
     parser.add_argument("filename", nargs="?", help="Filename to test")
 
     args = parser.parse_args()
 
     if args.action == "test":
         if not args.filename:
-            print("Error: Filename must be provided for the 'test' action.")
+            test_files = [
+                f[:-3] for f in os.listdir("tests") if f.startswith("test_") and f.endswith(".py")
+            ]
+            for test_file in test_files:
+                test_module = f"tests/{test_file}"
+                pytest.main([f"{test_module}.py", "-s"])
             return
-        test_single_file(args.filename)
+        else:
+            test_single_file(args.filename)
     elif args.action == "generate":
         generate_files()
     elif args.action == "clean":

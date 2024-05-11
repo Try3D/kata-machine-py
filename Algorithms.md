@@ -14,5 +14,6 @@
 - Queue
 - Deque
 
-## Priority Queue
+## Tree
+- Binary Search Tree
 - Heap
