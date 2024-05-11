@@ -17,4 +17,4 @@ An exercise-based python tool to practice common data structures and algorithms
 - [ ] LRU Cache
 
 ## Based on
-This project is based on ThePrimeagen's (kata-machine)[https://github.com/ThePrimeagen/kata-machine]
+This project is based on ThePrimeagen's [kata-machine](https://github.com/ThePrimeagen/kata-machine)
