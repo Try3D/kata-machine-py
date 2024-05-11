@@ -1,0 +1,16 @@
+[project]
+name = "kata-machine"
+version = "0.0.0"
+authors = [{ name = "Try3D", email = "rsarans186@gmail.com" }]
+description = "An exercise based python tool to practice common data structures and algorithms"
+readme = "README.md"
+require = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/try3d/dashdot"
+"Bug Tracker" = "https://github.com/try3d/dashdot/issues"
