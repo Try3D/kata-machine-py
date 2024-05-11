@@ -1,20 +1,62 @@
 # Kata machine
 
-An exercise-based python tool to practice common data structures and algorithms 
+## Introduction
+An exercise-based project to practice common data structures and algorithms in python.
+
+## Motivation
+If I don't keep practicing data structures and algorithms, I forget it. Hence, I am building this to automate the boring parts of dsa which is designing the inteface and testing.
+
+## Getting Started
+Clone the repo:
+```
+git clone https://github.com/try3d/kata-machine
+```
+Change into the directory:
+```
+cd kata-machine
+```
+Generate the exercise files:
+```
+python main.py generate
+```
+Start editing the files in `exercises/` directory.
 
 ## Usage
+Start solving any question.
 
-## Todo
-- [x] Sorting
-- [x] Stack
-- [x] Queue
-- [ ] Linked list
-- [ ] Circular Queue / Ring Buffer
-- [x] Tree
-- [x] Hash
-- [ ] Graph ADT
-- [ ] Maze solving
-- [ ] LRU Cache
+To run all tests, execute:
+```
+python main.py test
+```
 
-## Based on
-This project is based on ThePrimeagen's [kata-machine](https://github.com/ThePrimeagen/kata-machine)
+or to run only a specific test, run:
+```
+python main.py test :filename
+```
+
+NOTE: You don't have to enter the entire file name. You can fuzzy run tests. For example, `linked_list` can be shortened to `linked` or `list` or `l`.
+
+## Algorithms
+
+### Search
+- Linear Search
+- Binary Search
+
+### Sort
+- Bubble Sort
+- Selection Sort
+- Insertion Sort
+- Merge Sort
+- Quick Sort
+
+### List
+- Stack
+- Queue
+- Deque
+
+### Tree
+- Binary Search Tree
+- Heap
+
+## Inspiration
+This project is based on ThePrimeagen's [kata-machine](https://github.com/ThePrimeagen/kata-machine) but for python

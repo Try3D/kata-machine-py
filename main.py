@@ -26,7 +26,7 @@ def test_single_file(search):
 
 
 def generate_files():
-    print("Generating files to a new folder...")
+    print("Generating files to exercises/")
     src_dir = "src"
     exercises_dir = "exercises"
     if not os.path.exists(exercises_dir):
