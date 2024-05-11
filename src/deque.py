@@ -10,17 +10,26 @@ class Node(Generic[T]):
         self.prev: Union[Node[T], None] = None
 
 
-class Queue(Generic[T]):
+class Deque(Generic[T]):
     def __init__(self):
         ...
 
-    def enqueue(self, value: T) -> None:
+    def push_back(self, value: T) -> None:
         ...
 
-    def dequeue(self) -> Union[T, None]:
+    def push_front(self, value: T) -> None:
         ...
 
-    def peek(self) -> Union[T, None]:
+    def pop_back(self) -> Union[T, None]:
+        ...
+
+    def pop_front(self) -> Union[T, None]:
+        ...
+
+    def peek_back(self) -> Union[T, None]:
+        ...
+
+    def peek_front(self) -> Union[T, None]:
         ...
 
     def is_empty(self) -> bool:
