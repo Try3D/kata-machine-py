@@ -1,7 +1,7 @@
 # Kata machine
 
 ## Introduction
-An exercise-based project to practice common data structures and algorithms in python.
+An exercise-based project to practice common data structures and algorithms in python. Based on [ThePrimeagen's kata machine](https://github.com/ThePrimeagen/kata-machine).
 
 ## Motivation
 If I don't keep practicing data structures and algorithms, I forget it. Hence, I am building this to automate the boring parts of dsa which is designing the inteface and testing.
@@ -57,6 +57,3 @@ NOTE: You don't have to enter the entire file name. You can fuzzy run tests. For
 ### Tree
 - Binary Search Tree
 - Heap
-
-## Inspiration
-This project is based on ThePrimeagen's [kata-machine](https://github.com/ThePrimeagen/kata-machine) but for python
