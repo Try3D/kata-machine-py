@@ -56,4 +56,8 @@ NOTE: You don't have to enter the entire file name. You can fuzzy run tests. For
 
 ### Tree
 - Binary Search Tree
+- Pre-order traversal
+- In-order traversal
+- Post-order traversal
+- Level-order traversal
 - Heap
