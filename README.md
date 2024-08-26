@@ -61,3 +61,6 @@ NOTE: You don't have to enter the entire file name. You can fuzzy run tests. For
 - Post-order traversal
 - Level-order traversal
 - Heap
+
+## Path finding
+- Dijkstra's Algorithm
