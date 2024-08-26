@@ -1,10 +1,10 @@
-from typing import Dict
+from typing import Dict, Set, Union
 import heapq
 
 
 class Graph:
     def __init__(self):
-        self.nodes = set()
+        self.nodes: Set[str] = set()
         self.edges = {}
 
     def add_node(self, value: str):
@@ -19,4 +19,5 @@ class Graph:
         self.edges[to_node][from_node] = weight
 
 
-def dijkstra_shortest_path(graph: Graph, start: str) -> Dict[str, int]: ...
+def dijkstra_shortest_path(graph: Graph, start: str) -> Dict[str, Union[int, float]]:
+    ...
